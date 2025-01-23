@@ -1,15 +1,15 @@
-package org.alpercaktug.stepdefinitions;
+package stepdefinitions;
 
-import org.alpercaktug.driver.DriverManager;
+import driver.DriverManager;
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
-import org.alpercaktug.pages.mobile.HomePage;
-import org.alpercaktug.pages.mobile.ProductDetailsPage;
-import org.alpercaktug.pages.mobile.SearchResultsPage;
+import pages.mobile.HomePage;
+import pages.mobile.ProductDetailsPage;
+import pages.mobile.SearchResultsPage;
 
 public class AkakceSteps {
 

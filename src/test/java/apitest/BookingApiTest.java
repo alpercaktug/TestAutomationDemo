@@ -1,4 +1,4 @@
-package org.alpercaktug.apitest;
+package apitest;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

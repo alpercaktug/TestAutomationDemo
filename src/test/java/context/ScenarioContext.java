@@ -1,4 +1,4 @@
-package org.alpercaktug.context;
+package context;
 
 import java.util.HashMap;
 import java.util.Map;
