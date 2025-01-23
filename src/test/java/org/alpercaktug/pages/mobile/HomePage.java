@@ -1,4 +1,4 @@
-package pages.mobile;
+package org.alpercaktug.pages.mobile;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
