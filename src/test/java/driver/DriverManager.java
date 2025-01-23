@@ -1,4 +1,4 @@
-package org.alpercaktug.driver;
+package driver;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;

@@ -1,6 +1,6 @@
-package org.alpercaktug.hooks;
+package hooks;
 
-import org.alpercaktug.driver.DriverManager;
+import driver.DriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;

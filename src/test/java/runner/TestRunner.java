@@ -1,4 +1,4 @@
-package org.alpercaktug.runner;
+package runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources",
-        glue = {"org/alpercaktug/stepdefinitions", "org/alpercaktug/hooks"},
+        glue = {"stepdefinitions", "hooks"},
         plugin = {
                 "pretty",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"

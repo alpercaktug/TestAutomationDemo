@@ -1,4 +1,4 @@
-package org.alpercaktug.pages.mobile;
+package pages.mobile;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.PerformsTouchActions;

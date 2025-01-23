@@ -1,17 +1,17 @@
-package org.alpercaktug.stepdefinitions;
+package stepdefinitions;
 
-import org.alpercaktug.context.ScenarioContext;
-import org.alpercaktug.driver.DriverManager;
+import context.ScenarioContext;
+import driver.DriverManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import org.alpercaktug.pages.web.CartPage;
-import org.alpercaktug.pages.web.HomePage;
-import org.alpercaktug.pages.web.ProductDetailPage;
-import org.alpercaktug.pages.web.ProductPage;
+import pages.web.CartPage;
+import pages.web.HomePage;
+import pages.web.ProductDetailPage;
+import pages.web.ProductPage;
 
 public class HepsiburadaSteps {
 
