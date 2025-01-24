@@ -26,7 +26,6 @@ public class AkakceSteps {
         this.productDetailsPage = new ProductDetailsPage(appiumDriver);
     }
 
-
     @Given("I open the Akakçe mobile app and continue without signing in")
     public void iOpenTheAkakçeMobileAppAndContinueWithoutSigningIn() {
         System.out.println("Navigate to Akakce via driver instance");

@@ -1,5 +1,7 @@
-package pages.web;
+package pages;
 
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,14 +11,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Set;
 
-public class BasePage {
+public abstract class Page {
 
     protected WebDriver driver;
-    private final WebDriverWait wait;
+    protected WebDriverWait wait;
 
-    public BasePage(WebDriver driver) {
+    private static final int TIMEOUT = 30;
+
+    public Page(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
+    }
+
+    public Page(AppiumDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
     }
 
     public void navigateTo(String url) {
@@ -31,21 +40,12 @@ public class BasePage {
         return waitForElementToBeVisible(locator).getText().trim();
     }
 
-    public void handleNewTab() {
-        String originalTab = driver.getWindowHandle();
+    public void enterText(By locator, String text) {
+        waitForElementToBeVisible(locator).sendKeys(text);
+    }
 
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(driver -> driver.getWindowHandles().size() > 1);
-
-        Set<String> allTabs = driver.getWindowHandles();
-
-        for (String tab : allTabs) {
-            if (!tab.equals(originalTab)) {
-                driver.switchTo().window(tab);
-                System.out.println("Switched to new tab: " + driver.getTitle());
-                break;
-            }
-        }
+    public boolean isElementVisible(By locator) {
+        return waitForElementToBeVisible(locator).isDisplayed();
     }
 
     protected WebElement waitForElementToBeVisible(By locator) {

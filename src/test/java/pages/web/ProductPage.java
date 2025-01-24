@@ -5,10 +5,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import pages.Page;
 
 import java.util.List;
 
-public class ProductPage extends BasePage {
+public class ProductPage extends WebBasePage {
 
     private final By priceElements = By.xpath("//div[@data-test-id='price-current-price']");
 

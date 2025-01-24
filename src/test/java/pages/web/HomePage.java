@@ -4,17 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import pages.Page;
 
 
-public class HomePage extends BasePage {
+public class HomePage extends WebBasePage {
 
     private final By acceptCookie = By.xpath("//button[@id='onetrust-accept-btn-handler']");
 
-    private final Actions actions;
+    Actions actions = new Actions(driver);
 
     public HomePage(WebDriver driver) {
         super(driver);
-        this.actions = new Actions(driver);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class HomePage extends BasePage {
 
     public void hoverOverMenuByText(String menuText) {
         By dynamicMenu = By.xpath("//span[contains(@class, 'sf-MenuItems')]/span[text()='" + menuText + "']");
-        WebElement element = waitForElementToBeClickable(dynamicMenu);
+        WebElement element = waitForElementToBeVisible(dynamicMenu);
         actions.moveToElement(element).perform();
     }
 

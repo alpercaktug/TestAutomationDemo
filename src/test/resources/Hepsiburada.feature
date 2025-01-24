@@ -10,4 +10,3 @@ Feature: Hepsiburada Web Browser Test
     And I select the highest priced product from the search results
     And I add to cart product on the product detail page
     Then I should see the product in my cart with the same price as the product detail page
-

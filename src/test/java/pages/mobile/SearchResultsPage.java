@@ -8,6 +8,7 @@ import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
+import pages.Page;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -15,7 +16,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class SearchResultsPage extends BasePage {
+public class SearchResultsPage extends MobileBasePage {
+
     private final By filterButton = By.id("com.akakce.akakce:id/filterArea");
     private final By subCategory = By.xpath("//android.widget.TextView[@text='Bilgisayar, Donanım']");
     private final By showProductsButton = By.id("com.akakce.akakce:id/applyFilterBtn");
@@ -28,14 +30,14 @@ public class SearchResultsPage extends BasePage {
     }
 
     public void selectSubCategory() {
-        click(filterButton);
-        click(subCategory);
-        click(showProductsButton);
+        clickElement(filterButton);
+        clickElement(subCategory);
+        clickElement(showProductsButton);
     }
 
     public void applyHighestPriceFilter() {
-        click(sortButton);
-        click(highestPriceOption);
+        clickElement(sortButton);
+        clickElement(highestPriceOption);
     }
 
     public void selectProductByIndex(int index) {
@@ -68,7 +70,7 @@ public class SearchResultsPage extends BasePage {
 
     public void clickGoToProductButton() {
         scrollToElement("Ürüne Git");
-        click(goToProduct);
+        clickElement(goToProduct);
     }
 
     private String getDynamicXPath(int index) {

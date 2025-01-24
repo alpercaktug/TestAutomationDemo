@@ -31,6 +31,7 @@ public class HepsiburadaSteps {
     @Given("I visit {string}")
     public void iVisit(String url) throws InterruptedException {
         homePage.navigateTo(url);
+        Thread.sleep(1000);
     }
 
     @When("I navigate to {string} > {string} > {string}")
