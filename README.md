@@ -1,17 +1,16 @@
-API tests can run with "**maven test**" command 
+- API tests can run with "**maven test**" command 
 or directly run from **src/test/java/api/BookingApiTest**
 
-Cucumber tests (Mobile and Web Browser) can run with **src/test/java/runner/TestRunner.java**
+- Cucumber tests (Mobile and Web Browser) can run with **src/test/java/runner/TestRunner.java**
 or directly from feature files in sources folder
 
-Cucumber Tags: @regression, @mobile, @browser
+- Cucumber Tags: @regression, @mobile, @browser
 
-Browser tests using bonigarcia WebDriverManager
+- Browser tests using bonigarcia WebDriverManager
 
-Mobile test setup may a little hardcoded, you can change capabilities for your environment from **src/test/java/driver/DriverManager.java** 
-
+- Mobile test setup may a little hardcoded, you can change capabilities for your environment from **src/test/java/driver/DriverManager.java** 
 Sorry For that.
 
-Project SDK: Oracle OpenJDK 21.0.2
+- Project SDK: Oracle OpenJDK 21.0.2
 
 Thank You.
